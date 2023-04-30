@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+body {
+  background-color: pink;
+  margin: 0;
+}
+
+.topnav {
+  background-color: #1B1B1B;
+  color: white;
+  padding-left: 25px;
+  border: 20px groove #494F55;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 120px;
+}
+
+@keyframes example {
+  0% {
+    color: chartreuse;
+  }
+
+  25% {
+    color: aqua;
+  }
+
+  50% {
+    color: deepskyblue;
+  }
+
+  75% {
+    color: orange;
+  }
+
+  100% {
+    color: yellow;
+  }
+}
+
+.h_1 {
+  font-family: monoton;
+  font-size: 60px;
+  animation-name: example;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  font-weight: normal;
+}
+
+.inputmain {
+  height: 45px;
+  width: 600px;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 0 40px 0 120px;
+  font-size: 20px;
+}
+
+.inputmain::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  content: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAAAAAAAAAAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCAAUABQDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAUGBwII/8QAKRAAAQIFBAEEAgMAAAAAAAAAAQIDBAUGBxEACBIhEwkiMUEUQiMyUv/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCSu1RG7/aJWMwuTIrgzC8tGoWqImEvjlOOhtjPJXOCKiGkgfvDnoAkhKcjVxpT1AbhbvppK6LsHSSabnC4RETUVTVJxfh5IknCvChPTpz/AFKh7vjxgAqTF+oZfyqLq3Tk21q1jy0TmduNN1DGtKKeLbifIIcqHYbS1/K6R8pwn/YPNx9kcy2YQlLXhsO/HTCc0jCJbqiSvuKUJ9BjuIdCe+KiMktjoBKVIwpv3B7ToeyjdO08zCz6raorCcqPki5vHziJYU84QM8GWXENtI66QhOB9kkklq1W+riVXMoaQ1ZI3vyJROoJqOhVno8HEhQCh9KGcEfRBGmgzKm9slFU9umqq78M1FrqybytmHdS84hUM1kBtTjaOPJK1JYQCeR+VdDkdbaUgjB7GmmgrdvKAk9tKeVIJAyqEk7UXERDEJkFEP5nVPLbbGPagLcXxT+oIA6AAaaaD//Z');
+  cursor: pointer;
+}
+
+.b0 {
+  margin: 150px -180px 0 0;
+}
+
+.b1 {
+  margin: 150px -50px 0 0;
+}
+
+.buttons {
+  border-radius: 30px;
+}
+
+.blob-btn {
+  z-index: 1;
+  position: relative;
+  padding: 14px 35px 9px 35px;
+  text-transform: uppercase;
+  color: #25b1cc;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  transition: color 0.5s;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.blob-btn:before {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #25b1cc;
+  border-radius: 30px;
+}
+
+.blob-btn:after {
+  content: "";
+  z-index: -2;
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s 0.2s;
+  border-radius: 30px;
+}
+
+.blob-btn:hover {
+  color: #FFFFFF;
+  border-radius: 30px;
+}
+
+.blob-btn:hover:after {
+  transition: all 0.3s;
+  left: 0;
+  top: 0;
+  border-radius: 30px;
+}
+
+.blob-btn__inner {
+  z-index: -1;
+  overflow: hidden;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  background: #ffffff;
+}
+
+.blob-btn__blobs {
+  position: relative;
+  display: block;
+  height: 100%;
+  filter: url("#goo");
+}
+
+.blob-btn__blob {
+  position: absolute;
+  top: 2px;
+  width: 25%;
+  height: 100%;
+  background: #25b1cc;
+  border-radius: 100%;
+  transform: translate3d(0, 150%, 0) scale(1.7);
+  transition: transform 0.45s;
+}
+
+@supports (filter: url("#goo")) {
+  .blob-btn__blob {
+    transform: translate3d(0, 150%, 0) scale(1.4);
+  }
+}
+
+.blob-btn__blob:nth-child(1) {
+  left: 0%;
+  transition-delay: 0s;
+}
+
+.blob-btn__blob:nth-child(2) {
+  left: 30%;
+  transition-delay: 0.08s;
+}
+
+.blob-btn__blob:nth-child(3) {
+  left: 60%;
+  transition-delay: 0.16s;
+}
+
+.blob-btn__blob:nth-child(4) {
+  left: 90%;
+  transition-delay: 0.24s;
+}
+
+.blob-btn:hover .blob-btn__blob {
+  transform: translateZ(0) scale(1.7);
+}
+
+@supports (filter: url("#goo")) {
+  .blob-btn:hover .blob-btn__blob {
+    transform: translateZ(0) scale(1.4);
+  }
+}
+
+.ico1 {
+  margin-right: 10px;
+  margin-left: -100px;
+  color: white;
+  font-size: 35px;
+}
+
+.ico2 {
+  font-size: 35px;
+}
+
+.ico3 {
+  margin-left: -50px;
+  margin-top: -25px;
+}
+
+#navbarDropdownMenuLink {
+  margin-top: 25px;
+}
+
+.ico4 {
+  margin-left: -95px;
+  z-index: 2;
+}
+
+.ico5 {
+  height: 45px;
+  margin: 0 20px 20px -10px;
+}
+
+.icoo {
+  margin-top: -50px;
+  margin-right: 45px;
+  width: 20px;
+}
+
+.fix1 {
+  color: black;
+  font-size: 30px;
+  margin-top: 0;
+  margin-left: auto;
+}
+
+.fix2 {
+  color: black;
+  font-size: 20px;
+}
+
+.hide {
+  display: none;
+}
+
+.ico {
+  height: 25px;
+  margin-bottom: 5px;
+}
+
+.dropdown1 {
+  position: relative;
+}
+
+.menu1 {
+  position: absolute;
+  list-style-type: none;
+  margin: 5px 0;
+  padding: 0;
+  border: 1px solid grey;
+  width: 100px;
+}
+
+.menu1 li {
+  margin: 0;
+  background-color: white;
+  color: black;
+}
+
+.menu1 li:hover {
+  background-color: lightgray;
+}
+
+.menu1 li button {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 5px;
+  margin: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.home h2 {
+  margin-top: 10px;
+  font-size: 100px;
+  height: 125px;
+  width: 650px;
+  border-block-style: solid;
+}

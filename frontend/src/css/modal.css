@@ -1,0 +1,149 @@
+.modal_test {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.modal_testing {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-container {
+  position: absolute;
+  width: 60%;
+  background: #ffffff;
+  left: 25%;
+  top: 30%;
+  padding: 20px;
+}
+
+.modalinput {
+  margin-left: 25px;
+  width: 250px;
+  padding-left: 10px;
+  height: 30px;
+}
+
+.modalinput2 {
+  margin-left: 12px;
+}
+
+.modalinput3 {
+  margin-left: 42px;
+}
+
+.modalinput4 {
+  margin-top: -220px;
+  margin-left: 15px;
+  width: 200px;
+}
+
+.modalinput5 {
+  margin-top: -220px;
+  margin-left: 25px;
+  width: 200px;
+}
+
+.isvisible {
+  display: inline;
+}
+
+.isVisible {
+  display: none;
+}
+
+.__loading span {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  border-radius: 50%;
+  display: inline-block;
+  animation: dots 1.55s ease-in-out infinite;
+}
+
+.__loading span:nth-child(1) {
+  background-color: #ffd957;
+  animation-delay: 0.05s;
+}
+
+.__loading span:nth-child(2) {
+  background-color: #57ffa0;
+  animation-delay: 0.55s;
+}
+
+.__loading span:nth-child(3) {
+  background-color: #ff8b57;
+  animation-delay: 1.1s;
+}
+
+@keyframes dots {
+  50% {
+    opacity: 0;
+    transform: scale(0.7) translateY(30px);
+  }
+}
+
+.modalcontent {
+  width: 400px;
+  margin-left: 300px;
+  border: 10px groove gray;
+  border-radius: 12px;
+}
+
+.modalwrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: 60px;
+  height: 45px;
+  transform: translate(-50%, -50%);
+}
+
+.modala {
+  display: block;
+  width: 150px;
+  line-height: 40px;
+  background: orangered;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.modala:before,
+.modala:after {
+  position: absolute;
+  content: "";
+  transition: all .25s;
+}
+
+.modala:before {
+  border-bottom: 2px solid purple;
+  border-left: 2px solid purple;
+  width: 10%;
+  height: 33%;
+  left: -10px;
+  bottom: -10px;
+}
+
+.modala:after {
+  border-top: 2px solid purple;
+  border-right: 2px solid purple;
+  width: 10%;
+  height: 33%;
+  top: -10px;
+  right: -10px;
+}
+
+.modala:hover:before {
+  width: 112%;
+  height: 140%;
+}
+
+.modala:hover:after {
+  width: 112%;
+  height: 140%;
+}
