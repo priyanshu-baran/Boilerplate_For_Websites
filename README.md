@@ -26,6 +26,7 @@ For hosting, I have used <a href="https://app.netlify.com" target="_blank">Netli
 <img src="./images/5.png" alt="Home_page_2">
 <img src="./images/6.png" alt="Loading_Animation">
 <img src="./images/7.png" alt="Toast_Animation">
+<img src="./images/8.png" alt="Error_Animation">
 </details>
 
 ---
