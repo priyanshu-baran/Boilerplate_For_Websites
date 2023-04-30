@@ -14,8 +14,11 @@ And for sending mail for **Forgot Password button**, I have used one of the most
 
 ## Demo 👀
 
-You can view the demo of this website by following <a href="https://my-own-music-player-application.netlify.app/" target="_blank">this link</a>. Although I have also provided the screenshots below of exactly how it looks like.<br>
-For hosting, I have used <a href="https://app.netlify.com" target="_blank">Netlify</a> to host this website.
+<!-- You can view the demo of this website by following <a href="https://my-own-music-player-application.netlify.app/" target="_blank">this link</a>. Although  -->
+
+I have provided the screenshots below of exactly how it looks like.<br>
+
+<!-- For hosting, I have used <a href="https://app.netlify.com" target="_blank">Netlify</a> to host this website. -->
 
 <details>
 <summary>Here is the ss of the website</summary>
