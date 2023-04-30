@@ -42,7 +42,7 @@ For hosting, I have used <a href="https://app.netlify.com" target="_blank">Netli
 ### After that:
 
 1. Now clone this repo and navigate to the cloned folder.
-   > git clone "" && cd ""
+   > git clone https://github.com/priyanshu-baran/Boilerplate_For_Websites.git && cd Boilerplate_For_Websites
 2. Open that cloned folder in VS Code and before moving further, simply open two terminals one with `frontend` folder and other with `backend` folder.
 3. Install all the dependencies needed for this project by running this command (in both terminals seperately).
    > npm install
