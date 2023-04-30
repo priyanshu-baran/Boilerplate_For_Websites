@@ -116,7 +116,7 @@ class Model extends React.Component {
                                 res.data.apiKey
                               )
                               .then(
-                                async (res) => {
+                                async () => {
                                   const validation = () => {
                                     return new Promise((resolve) => {
                                       const checkValidation = () => {
@@ -134,6 +134,9 @@ class Model extends React.Component {
                                   };
                                   await validation();
                                   this.toggleVisibility_2();
+                                  toast.info(
+                                    'From here you might encounter the error especially for password validation part..!!'
+                                  );
                                 },
                                 () => {
                                   toast.error(
