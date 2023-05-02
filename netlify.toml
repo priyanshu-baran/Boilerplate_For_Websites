@@ -1,8 +1,8 @@
 [build]
   base = "/"
   command = "npm run build"
-  publish = "/frontend/build"
-  functions = "../backend/build"
+  publish = "frontend/build"
+  functions = "backend/build"
 [[redirects]]
   from = "/*"
   to = "/index.html"
