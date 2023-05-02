@@ -1,11 +1,11 @@
 [build]
-  command = "cd frontend && npm run build"
+  command = "npm run build"
   publish = "build"
-  base = "/"
+  base = "/frontend"
 [functions]
-  directory = "backend/build"
+  directory = "../backend/build"
   node_bundler = "esbuild"
 [[redirects]]
   from = "/*"
-  to = "/frontend/public/index.html"
+  to = "/public/index.html"
   status = 200
