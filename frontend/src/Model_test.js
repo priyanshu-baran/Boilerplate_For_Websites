@@ -51,7 +51,7 @@ class Model extends React.Component {
       () => {
         axios
           .post(
-            `http://localhost:5000/users/update/${this.state.result.username}`,
+            `https://boilerplate-for-websites.netlify.app/users/update/${this.state.result.username}`,
             {
               password: this.state.modalInputPass1,
             }
@@ -73,7 +73,7 @@ class Model extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .get('http://localhost:5000/users/')
+      .get('https://boilerplate-for-websites.netlify.app/users/')
       .then((res) => {
         this.setState(
           {
@@ -92,7 +92,7 @@ class Model extends React.Component {
                 if (this.state.result) {
                   axios
                     .get(
-                      `http://localhost:5000/users/${this.state.result.username}`
+                      `https://boilerplate-for-websites.netlify.app/users/${this.state.result.username}`
                     )
                     .then((res) => {
                       if (res.data.email === this.state.modalInputEmail) {
@@ -106,7 +106,9 @@ class Model extends React.Component {
                         toast.success('OTP sent to your registered mail id');
                         this.toggleVisibility_1();
                         axios
-                          .get('http://localhost:5000/api/env')
+                          .get(
+                            'https://boilerplate-for-websites.netlify.app/api/env'
+                          )
                           .then((res) => {
                             emailjs
                               .send(

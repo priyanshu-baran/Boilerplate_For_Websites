@@ -22,7 +22,7 @@ export const Login = () => {
     if (validation) {
       const fetchData = async () => {
         await axios
-          .get(`http://localhost:5000/users/${username}`)
+          .get(`https://boilerplate-for-websites.netlify.app/users/${username}`)
           .then((res) => {
             if (res.data.username !== username) {
             } else {
