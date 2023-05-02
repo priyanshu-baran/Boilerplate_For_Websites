@@ -16,31 +16,35 @@ export const SignUp = () => {
   const usenavigate = useNavigate();
   const isValidate = () => {
     let isValid = true;
-    axios.get('http://localhost:5000/users/').then((res) => {
-      const foundUser = res.data.find((user) => user.username === username);
-      if (isValid) {
-        if (foundUser) {
-          isValid = false;
-          toast.warning('User already exist');
-        } else {
-          if (password.length < 8 && coPassword.length < 8) {
+    axios
+      .get(
+        'https://boilerplate-for-websites.netlify.app/.netlify/functions/server/users/'
+      )
+      .then((res) => {
+        const foundUser = res.data.find((user) => user.username === username);
+        if (isValid) {
+          if (foundUser) {
             isValid = false;
-            toast.warning('Password length is too small (min-length: 8');
+            toast.warning('User already exist');
           } else {
-            if (password !== coPassword) {
+            if (password.length < 8 && coPassword.length < 8) {
               isValid = false;
-              toast.error('Enter same values in both the Password fields');
+              toast.warning('Password length is too small (min-length: 8');
             } else {
-              if (/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)) {
-              } else {
+              if (password !== coPassword) {
                 isValid = false;
-                toast.warning('Enter valid email address (example@abc.com)');
+                toast.error('Enter same values in both the Password fields');
+              } else {
+                if (/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)) {
+                } else {
+                  isValid = false;
+                  toast.warning('Enter valid email address (example@abc.com)');
+                }
               }
             }
           }
         }
-      }
-    });
+      });
     return isValid;
   };
   const handleSubmit = (e) => {
@@ -48,7 +52,10 @@ export const SignUp = () => {
     if (isValidate()) {
       let obj = { username, password, email, country, gender };
       axios
-        .post('http://localhost:5000/users/add', obj)
+        .post(
+          'https://boilerplate-for-websites.netlify.app/.netlify/functions/server/users/add',
+          obj
+        )
         .then((res) => {
           toast.success('Registered Successfully');
           usenavigate('/login');

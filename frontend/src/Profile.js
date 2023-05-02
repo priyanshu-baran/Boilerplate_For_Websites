@@ -15,7 +15,9 @@ export const Profile = () => {
       usenavigate('/login');
     }
     async function fetchData() {
-      const res = await axios.get(`http://localhost:5000/users/${username}`);
+      const res = await axios.get(
+        `https://boilerplate-for-websites.netlify.app/.netlify/functions/server/users/${username}`
+      );
       setData(res.data);
     }
     fetchData();
