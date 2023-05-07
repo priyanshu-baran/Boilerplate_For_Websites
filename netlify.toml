@@ -6,5 +6,5 @@
   node_bundler = "esbuild"
   [functions.command]
     command = "npm run start"
-  [[functions.routing]]
+  [functions.routing]
     pattern = "/users/*"
