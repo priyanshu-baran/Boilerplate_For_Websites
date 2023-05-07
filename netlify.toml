@@ -4,7 +4,7 @@
 [functions]
   directory = "backend"
   node_bundler = "esbuild"
-  [[functions.command]]
+  [functions.command]
     command = "npm run start"
   [[functions.routing]]
     pattern = "/users/*"
