@@ -18,7 +18,7 @@ export const SignUp = () => {
     let isValid = true;
     axios
       .get(
-        'https://boilerplate-for-websites.netlify.app/.netlify/functions/server/users/'
+        'https://boilerplate-for-websites.netlify.app/.netlify/functions/index/users/'
       )
       .then((res) => {
         const foundUser = res.data.find((user) => user.username === username);
@@ -53,7 +53,7 @@ export const SignUp = () => {
       let obj = { username, password, email, country, gender };
       axios
         .post(
-          'https://boilerplate-for-websites.netlify.app/.netlify/functions/server/users/add',
+          'https://boilerplate-for-websites.netlify.app/.netlify/functions/index/users/add',
           obj
         )
         .then((res) => {

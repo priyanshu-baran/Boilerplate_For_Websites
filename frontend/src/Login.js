@@ -23,7 +23,7 @@ export const Login = () => {
       const fetchData = async () => {
         await axios
           .get(
-            `https://boilerplate-for-websites.netlify.app/.netlify/functions/server/users/${username}`
+            `https://boilerplate-for-websites.netlify.app/.netlify/functions/index/users/${username}`
           )
           .then((res) => {
             if (res.data.username !== username) {
