@@ -42,7 +42,7 @@ const handler = async (event, context) => {
 
   // Invoke the /api/env endpoint handler with the request and response objects
   if (event.httpMethod === 'GET' && event.path === '/api/env') {
-    app.handle(event, context);
+    app(event, context);
   }
 };
 
