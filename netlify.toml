@@ -5,5 +5,4 @@
   directory = "backend"
   command = "npm run start"
   [[functions.routing]]
-    pattern = "/api/*"
     pattern = "/users/*"
