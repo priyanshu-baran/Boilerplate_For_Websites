@@ -41,9 +41,9 @@ const handler = async (event, context) => {
   usersRouter(event, context);
 
   // Invoke the /api/env endpoint handler with the request and response objects
-  if (event.httpMethod === 'GET' && event.path === '/api/env') {
-    app(event, context);
-  }
+  // if (event.httpMethod === 'GET' && event.path === '/api/env') {
+  //   app(event, context);
+  // }
 };
 
 // Export the Netlify function handler
