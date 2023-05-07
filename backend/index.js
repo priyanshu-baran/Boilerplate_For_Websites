@@ -35,38 +35,16 @@ app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
 });
 
-// define the function handler for the /users endpoint
-// export async function usersHandler(event, context) {
-//   try {
-//     // process the request and return a response
-//     const result = await app(event, context);
-//     return {
-//       statusCode: 200,
-//       body: JSON.stringify(result),
-//     };
-//   } catch (error) {
-//     console.error(error);
-//     return {
-//       statusCode: 500,
-//       body: JSON.stringify({ error: 'Internal Server Error' }),
-//     };
-//   }
-// }
+// Define the Netlify function handler
+const handler = async (event, context) => {
+  // Invoke the usersRouter middleware with the request and response objects
+  usersRouter(event, context);
 
-// // define the function handler for the /api/env endpoint
-// export async function envHandler(event, context) {
-//   try {
-//     // process the request and return a response
-//     const result = await app(event, context);
-//     return {
-//       statusCode: 200,
-//       body: JSON.stringify(result),
-//     };
-//   } catch (error) {
-//     console.error(error);
-//     return {
-//       statusCode: 500,
-//       body: JSON.stringify({ error: 'Internal Server Error' }),
-//     };
-//   }
-// }
+  // Invoke the /api/env endpoint handler with the request and response objects
+  if (event.httpMethod === 'GET' && event.path === '/api/env') {
+    app.handle(event, context);
+  }
+};
+
+// Export the Netlify function handler
+export { handler };
