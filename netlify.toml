@@ -1,11 +1,9 @@
 [build]
-  command = "npm run build"
-  publish = "build"
-  base = "/frontend"
+  command = "cd frontend && npm install && npm run build"
+  publish = "frontend/build"
 [functions]
-  directory = "../backend/build"
-  node_bundler = "esbuild"
-[[redirects]]
-  from = "/*"
-  to = "/public/index.html"
-  status = 200
+  directory = "backend"
+  command = "npm run start"
+  [[functions.routing]]
+    pattern = "/api/*"
+    pattern = "/users/*"

@@ -16,7 +16,7 @@ export const Profile = () => {
     }
     async function fetchData() {
       const res = await axios.get(
-        `https://boilerplate-for-websites.netlify.app/.netlify/functions/server/users/${username}`
+        `https://boilerplate-for-websites.netlify.app/users/${username}`
       );
       setData(res.data);
     }
