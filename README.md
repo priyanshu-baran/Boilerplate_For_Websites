@@ -14,11 +14,7 @@ And for sending mail for **Forgot Password button**, I have used one of the most
 
 ## Demo 👀
 
-<!-- You can view the demo of this website by following <a href="https://my-own-music-player-application.netlify.app/" target="_blank">this link</a>. Although  -->
-
-I have provided the screenshots below of exactly how it looks like.<br>
-
-<!-- For hosting, I have used <a href="https://app.netlify.com" target="_blank">Netlify</a> to host this website. -->
+You can view the demo of this website by following [this link](https://boilerplate-for-websites.netlify.app/). Although I have also provided the screenshots below of exactly how it looks like.<br> For hosting, I have used [Netlify](https://app.netlify.com) to host this website.
 
 <details>
 <summary>Here is the ss of the website</summary>
@@ -50,10 +46,12 @@ I have provided the screenshots below of exactly how it looks like.<br>
 3. Install all the dependencies needed for this project by running this command (in both terminals seperately).
    > npm install
 4. Then do the required changes needed before running it, like replacing all the stuffs that you have, with mine one. For this you can simply create one `.env` file inside the backend folder and add all that stuffs right inside it with appropriate name.
-   > **_Note_** I have already defined these terms so be-careful so that you use that names only or else change in all places wherever it is used according to your wish.
+   > **_Note:_** I have already defined these terms so be-careful so that you use that names only or else change in all places wherever it is used according to your wish.
 5. Now, since all refactoring part is done so let's move ahead by running this command, again in both the terminals seperately.
    > npm start
 6. If both of your terminals runs smoothly without showing any error, then congrats 🥳🎉 you are in good state, else re-config your setup and try again 🤕🫣.
+7. You can also host it by changing the details with yours on Netlify. I have already provided the netlify.toml file which is required to host on Netlify. You simply need to create an account on Netlify and then select import project from github and select this repo after forking it in yours.
+   > **_Note:_** Don't forget to change the **react_url** defined in the frontend/src/index.js file according to your hosted link and then share it to test it out.
 
 ---
 
