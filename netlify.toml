@@ -8,4 +8,7 @@
   [functions.command]
     command = "npm run start"
   [functions.routing]
-    pattern = "/.netlify/functions/index/*"
+    [[functions.routing.patterns]]
+      pattern = "/users/*"
+    [[functions.routing.patterns]]
+      pattern = "/api/*"
