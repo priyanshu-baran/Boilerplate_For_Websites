@@ -17,7 +17,9 @@ export const SignUp = () => {
   const isValidate = () => {
     let isValid = true;
     axios
-      .get('https://boilerplate-for-websites.netlify.app/users/')
+      .get(
+        'https://boilerplate-for-websites.netlify.app/.netlify/functions/server/users/'
+      )
       .then((res) => {
         const foundUser = res.data.find((user) => user.username === username);
         if (isValid) {
@@ -50,7 +52,10 @@ export const SignUp = () => {
     if (isValidate()) {
       let obj = { username, password, email, country, gender };
       axios
-        .post('https://boilerplate-for-websites.netlify.app/users/add', obj)
+        .post(
+          'https://boilerplate-for-websites.netlify.app/.netlify/functions/server/users/add',
+          obj
+        )
         .then((res) => {
           toast.success('Registered Successfully');
           usenavigate('/login');
