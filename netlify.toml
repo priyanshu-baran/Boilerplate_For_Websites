@@ -1,8 +1,9 @@
 [build]
-  command = "cd frontend && npm install && npm run build"
+  command = "npm run build && cd frontend && npm install && npm run build"
   publish = "frontend/build"
 [functions]
   directory = "backend"
+  node_bundler = "esbuild"
   command = "npm run start"
   [[functions.routing]]
     pattern = "/users/*"
