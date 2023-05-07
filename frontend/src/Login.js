@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { Loading } from './Loading';
 import { toast } from 'react-toastify';
 import axios from 'axios';
+import { react_url } from '.';
 
 import Model from './Model_test';
 /* **************** NOTE ***************** */
@@ -22,9 +23,7 @@ export const Login = () => {
     if (validation) {
       const fetchData = async () => {
         await axios
-          .get(
-            `https://boilerplate-for-websites.netlify.app/users/${username}`
-          )
+          .get(`${react_url}/users/${username}`)
           .then((res) => {
             if (res.data.username !== username) {
             } else {

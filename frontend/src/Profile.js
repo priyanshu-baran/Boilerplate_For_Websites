@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 import { Loading } from './Loading';
+import { react_url } from '.';
 
 export const Profile = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -15,9 +16,7 @@ export const Profile = () => {
       usenavigate('/login');
     }
     async function fetchData() {
-      const res = await axios.get(
-        `https://boilerplate-for-websites.netlify.app/users/${username}`
-      );
+      const res = await axios.get(`${react_url}/users/${username}`);
       setData(res.data);
     }
     fetchData();

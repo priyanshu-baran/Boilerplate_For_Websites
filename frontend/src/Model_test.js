@@ -3,6 +3,7 @@ import axios from 'axios';
 import React from 'react';
 import emailjs from 'emailjs-com';
 import { toast } from 'react-toastify';
+import { react_url } from '.';
 
 class Model extends React.Component {
   constructor(props) {
@@ -50,12 +51,9 @@ class Model extends React.Component {
       },
       () => {
         axios
-          .post(
-            `https://boilerplate-for-websites.netlify.app/users/update/${this.state.result.username}`,
-            {
-              password: this.state.modalInputPass1,
-            }
-          )
+          .post(`${react_url}/users/update/${this.state.result.username}`, {
+            password: this.state.modalInputPass1,
+          })
           .then(() => {
             toast.success('Password updated successfully');
             this.toggleVisibility_2();
@@ -73,7 +71,7 @@ class Model extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .get('https://boilerplate-for-websites.netlify.app/users/')
+      .get(`${react_url}/users/`)
       .then((res) => {
         this.setState(
           {
@@ -91,9 +89,7 @@ class Model extends React.Component {
               () => {
                 if (this.state.result) {
                   axios
-                    .get(
-                      `https://boilerplate-for-websites.netlify.app/users/${this.state.result.username}`
-                    )
+                    .get(`${react_url}/users/${this.state.result.username}`)
                     .then((res) => {
                       if (res.data.email === this.state.modalInputEmail) {
                         const templateParams = {
@@ -105,48 +101,44 @@ class Model extends React.Component {
                         };
                         toast.success('OTP sent to your registered mail id');
                         this.toggleVisibility_1();
-                        axios
-                          .get(
-                            'https://boilerplate-for-websites.netlify.app/api/env'
-                          )
-                          .then((res) => {
-                            emailjs
-                              .send(
-                                res.data.serviceId,
-                                res.data.templateId,
-                                templateParams,
-                                res.data.apiKey
-                              )
-                              .then(
-                                async () => {
-                                  const validation = () => {
-                                    return new Promise((resolve) => {
-                                      const checkValidation = () => {
-                                        if (
-                                          this.state.modalInputOTP !==
-                                          templateParams.code
-                                        ) {
-                                          setTimeout(checkValidation, 1000);
-                                        } else {
-                                          resolve();
-                                        }
-                                      };
-                                      checkValidation();
-                                    });
-                                  };
-                                  await validation();
-                                  this.toggleVisibility_2();
-                                  toast.info(
-                                    'From here you might encounter the error especially for password validation part..!!'
-                                  );
-                                },
-                                () => {
-                                  toast.error(
-                                    'Error occurred while sending the email. Please try again later.'
-                                  );
-                                }
-                              );
-                          });
+                        axios.get(`${react_url}/api/env`).then((res) => {
+                          emailjs
+                            .send(
+                              res.data.serviceId,
+                              res.data.templateId,
+                              templateParams,
+                              res.data.apiKey
+                            )
+                            .then(
+                              async () => {
+                                const validation = () => {
+                                  return new Promise((resolve) => {
+                                    const checkValidation = () => {
+                                      if (
+                                        this.state.modalInputOTP !==
+                                        templateParams.code
+                                      ) {
+                                        setTimeout(checkValidation, 1000);
+                                      } else {
+                                        resolve();
+                                      }
+                                    };
+                                    checkValidation();
+                                  });
+                                };
+                                await validation();
+                                this.toggleVisibility_2();
+                                toast.info(
+                                  'From here you might encounter the error especially for password validation part..!!'
+                                );
+                              },
+                              () => {
+                                toast.error(
+                                  'Error occurred while sending the email. Please try again later.'
+                                );
+                              }
+                            );
+                        });
                       } else toast.error('Email ID is not registered with us');
                     })
                     .catch((err) => {

@@ -11,12 +11,12 @@ import usersRouter from './routes/users.js';
 
 const app = express();
 
-// const port = process.env.PORT || 8000;
+const port = process.env.PORT || 8000;
 
 app.use(cors());
 app.use(express.json());
 
-router.get('/api/env', (req, res) => {
+router.get('/', (req, res) => {
   res.json({
     serviceId: process.env.EMAILJS_SERVICE_ID,
     templateId: process.env.EMAILJS_TEMPLATE_ID,
@@ -35,9 +35,8 @@ connection.once('open', () => {
   console.log('MongoDB database connection established successfully');
 });
 
-// app.listen(port, () => {
-//   console.log(`Server is running on port: ${port}`);
-// });
+app.listen(port, () => {
+  console.log(`Server is running on port: ${port}`);
+});
 
-// Define the Netlify function handler
 export const handler = serverless(app);
