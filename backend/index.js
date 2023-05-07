@@ -35,4 +35,38 @@ app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
 });
 
-// app.use('*', (req, res) => res.status(404).json({ error: 'not found' }));
+// define the function handler for the /users endpoint
+export async function usersHandler(event, context) {
+  try {
+    // process the request and return a response
+    const result = await app(event, context);
+    return {
+      statusCode: 200,
+      body: JSON.stringify(result),
+    };
+  } catch (error) {
+    console.error(error);
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ error: 'Internal Server Error' }),
+    };
+  }
+}
+
+// define the function handler for the /api/env endpoint
+export async function envHandler(event, context) {
+  try {
+    // process the request and return a response
+    const result = await app(event, context);
+    return {
+      statusCode: 200,
+      body: JSON.stringify(result),
+    };
+  } catch (error) {
+    console.error(error);
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ error: 'Internal Server Error' }),
+    };
+  }
+}
