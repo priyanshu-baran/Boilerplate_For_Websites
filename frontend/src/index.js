@@ -13,6 +13,7 @@ import './css/loading.css';
 import './css/main.css';
 import './css/modal.css';
 
+// export const react_url = 'http://localhost:5000';
 export const react_url = 'https://boilerplate-for-websites.netlify.app';
 
 ReactDOM.createRoot(document.getElementById('root')).render(<App />);
